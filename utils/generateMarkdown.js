@@ -11,6 +11,7 @@ function generateMarkdown(data) {
   ${data.description}
 
   ## Table of Contents
+  * [Description](#Description)
   * [Installation](#installation)
   * [Usage](#usage)
   * [License](#license)
@@ -25,16 +26,25 @@ function generateMarkdown(data) {
   ${data.usage}
 
   ## License
-  ${licenseBadge(userInput)}
+  ${licenseBadge(data)}
 
   ## Contributing
-  ${data.credit}
+  ${data.contributing}
 
   ## Test
   ${data.tests}
 
   ## Questions
   If you have any questions, contact ${data.username} on GitHub.
+  
+  ## Repository
+  - [Project Repo](${data.repo})
+  
+  ## GitHub
+  ![Image of me](${githubInfo.githubImage})
+  - ${githubInfo.name}
+  - [GitHub Profile](${githubInfo.profile})
+  - <${githubInfo.email}>
 `;
 }
 

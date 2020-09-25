@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const util = require("util");
+const axios = require("axios");
 const generateMarkdown = require("./utils/generateMarkdown");
 
 // array of questions for user
@@ -32,7 +32,7 @@ const questions = [
     },{
         type: "input",
         name: "contributing",
-        message: "Please provide your Github username: "
+        message: "Please provide your Github username (if more than one contributor, separate names with a comma and no space!): "
     },
     {
         type: "input",
@@ -49,20 +49,39 @@ const questions = [
         name: "repo",
         message: "What is your repo link?"
     },
-    {
-        type: "input",
-        name: "badge",
-        message: "Please provide the badges links that you want"
-    },
 ];
 
 // function to write README file
-function writeToFile(fileName, data) {
-    const queryUrl = `http:api.github.com/users/${data.username}`;
-}
+// function writeToFile(fileName, data) {
+//     const queryUrl = `http:api.github.com/users/${data.username}`;
+// }
 
 // function to initialize program
 function init() {
+    inquirer
+    .prompt(questions)
+    .then(function(data){
+        const queryUrl = `https://api.github.com/users/${data.username}`;
+
+        axios.get(queryUrl).then(function(res) {
+            
+            const githubInfo = {
+                githubImage: res.data.avatar_url,
+                email: res.data.email,
+                profile: res.data.html_url,
+                name: res.data.name
+            };
+            
+          fs.writeFile("README.md", generate(data, githubInfo), function(err) {
+            if (err) {
+              throw err;
+            };
+    
+            console.log("New README file created with success!");
+          });
+        });
+
+});
 
 }
 
