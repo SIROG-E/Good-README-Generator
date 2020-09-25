@@ -1,12 +1,11 @@
-const licenseBadge = require"./licenseBadge";
+// const licenseBadge = require("licenseBadge");
 
 // function to generate markdown for README
 function generateMarkdown(data) {
   return `
   
   ## **${data.title}**
-
-  ${licenseBadge(data)}
+  ![](https://img.shields.io/static/v1?label=${data.license}&message=${data.username}&color=ab8c9b)
 
   ## Description
   ${data.description}
@@ -27,7 +26,7 @@ function generateMarkdown(data) {
   ${data.usage}
 
   ## License
-  ${licenseBadge(data)}
+  This project is license by: ${data.license} 
 
   ## Contributing
   ${data.contributing}

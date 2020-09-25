@@ -31,15 +31,15 @@ const questions = [
         message: "Please choose a license:",
         choices: [
             "MIT",
-            "GPL"
             "Apache",
             "Boost",
-            
+            "BDS",
+            "GNU GPL",
             "Mozilla",
-            "Perl(aka Artistic)",
+            "Perl aka Artistic",
             "Unlicense",
+            "SIROG-E"
         ]
-
     },
     {
         type: "input",
@@ -89,17 +89,18 @@ function init() {
                 name: res.data.name
             };
             
-          fs.writeFile("README.md", generate(data, githubInfo), function(err) {
+          fs.writeFile("README.md", generateMarkdown(data, githubInfo), function(err) {
             if (err) {
               throw err;
             };
-    
             console.log("New README file created with success!");
           });
+          
         });
-
-});
-
+    });
+    // .catch((err) => {
+    //     if (err) throw err;
+    //   });
 }
 
 // function call to initialize program
