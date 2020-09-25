@@ -1,5 +1,3 @@
-
-
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
@@ -25,27 +23,26 @@ const questions = [
     {
         type: "input",
         name: "usage",
-        message: "Can you provide the usage information"
-    },
-    {
-        type: "input",
-        name: "contributing",
-        message: "Please provide the contribution guidelines"
-    },
-    {
-        type: "input",
-        name: "tests",
-        message: "Please provide tests instructions"
+        message: "Can you provide the usage information?"
     },
     {
         type: "input",
         name: "licence",
         message: "Please provide the app licence or your badge link"
+    },{
+        type: "input",
+        name: "contributing",
+        message: "Please provide your Github username: "
+    },
+    {
+        type: "input",
+        name: "tests",
+        message: "Please provide tests instructions: "
     },
     {
         type: "input",
         name: "username",
-        message: "What is your github user name?"
+        message: "What is your github username?"
     },
     {
         type: "input",
@@ -57,7 +54,6 @@ const questions = [
         name: "badge",
         message: "Please provide the badges links that you want"
     },
-
 ];
 
 // function to write README file
