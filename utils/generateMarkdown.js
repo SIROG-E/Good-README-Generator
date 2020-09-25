@@ -28,7 +28,7 @@ function generateMarkdown(data) {
   ${licenseBadge(userInput)}
 
   ## Contributing
-  ${data.credits}
+  ${data.credit}
 
   ## Test
   ${data.tests}
