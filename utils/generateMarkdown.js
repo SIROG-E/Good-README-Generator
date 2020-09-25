@@ -1,7 +1,40 @@
+const licenseBadge = require"./licenseBadge";
+
 // function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  return `
+  
+  # ${data.title}
+  ${licenseBadge(data)}
 
+  ## Description
+  ${data.description}
+
+  ## Table of Contents
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [License](#license)
+  * [Contributing](#contributing)
+  * [Test](#test)
+  * [Questions](#questions)
+  
+  ## Installation
+  ${data.installation}
+
+  ## Usage
+  ${data.usage}
+
+  ## License
+  ${licenseBadge(userInput)}
+
+  ## Contributing
+  ${data.credits}
+
+  ## Test
+  ${data.tests}
+
+  ## Questions
+  If you have any questions, contact ${data.username} on GitHub.
 `;
 }
 
