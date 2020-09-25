@@ -4,8 +4,7 @@ const licenseBadge = require"./licenseBadge";
 function generateMarkdown(data) {
   return `
   
-  # 
-  **${data.title}**
+  ## **${data.title}**
 
   ${licenseBadge(data)}
 

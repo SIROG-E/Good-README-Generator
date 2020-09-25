@@ -40,7 +40,8 @@ const questions = [
             "Unlicense",
         ]
 
-    },{
+    },
+    {
         type: "input",
         name: "contributing",
         message: "Please provide your Github username (if more than one contributor, separate names with a comma and no space!): "
