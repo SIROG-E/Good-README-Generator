@@ -26,9 +26,20 @@ const questions = [
         message: "Can you provide the usage information?"
     },
     {
-        type: "input",
-        name: "licence",
-        message: "Please provide the app licence or your badge link"
+        type: "list",
+        name: "license",
+        message: "Please choose a license:",
+        choices: [
+            "MIT",
+            "GPL"
+            "Apache",
+            "Boost",
+            
+            "Mozilla",
+            "Perl(aka Artistic)",
+            "Unlicense",
+        ]
+
     },{
         type: "input",
         name: "contributing",
@@ -39,6 +50,11 @@ const questions = [
         name: "tests",
         message: "Please provide tests instructions: "
     },
+    {
+        type: "input",
+        name: "questions",
+        message: "Please enter  your email address where you can be reached for additional questions:",
+      },
     {
         type: "input",
         name: "username",
