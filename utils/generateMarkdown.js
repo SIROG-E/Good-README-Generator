@@ -1,11 +1,13 @@
 // const licenseBadge = require("licenseBadge");
 
+//![](https://img.shields.io/static/v1?label=${data.license}&message=${data.username}&color=ab8c9b)
 // function to generate markdown for README
 function generateMarkdown(data) {
   return `
   
   ## **${data.title}**
-  ![](https://img.shields.io/static/v1?label=${data.license}&message=${data.username}&color=ab8c9b)
+  
+  [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
   ## Description
   ${data.description}
@@ -41,10 +43,10 @@ function generateMarkdown(data) {
   - [Project Repo](${data.repo})
   
   ## GitHub
-  ![Image of me](${githubInfo.githubImage})
-  - ${githubInfo.name}
-  - [GitHub Profile](${githubInfo.profile})
-  - <${githubInfo.email}>
+  ![Image of me](${data.githubInfo.githubImage})
+  - ${data.githubInfo.name}
+  - [GitHub Profile](${data.githubInfo.profile})
+  - <${data.githubInfo.email}>
 `;
 }
 

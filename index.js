@@ -70,7 +70,7 @@ const questions = [
 
 // function to write README file
 // function writeToFile(fileName, data) {
-//     const queryUrl = `http:api.github.com/users/${data.username}`;
+//     const queryUrl = `http://api.github.com/users/${data.username}`;
 // }
 
 // function to initialize program
@@ -82,14 +82,16 @@ function init() {
 
         axios.get(queryUrl).then(function(res) {
             
-            const githubInfo = {
+            const gitInfo = {
                 githubImage: res.data.avatar_url,
                 email: res.data.email,
                 profile: res.data.html_url,
                 name: res.data.name
             };
+
+            data.githubInfo = gitInfo;
             
-          fs.writeFile("README.md", generateMarkdown(data, githubInfo), function(err) {
+          fs.writeFile("README.md", generateMarkdown(data), function(err) {
             if (err) {
               throw err;
             };
@@ -97,10 +99,11 @@ function init() {
           });
           
         });
-    });
-    // .catch((err) => {
-    //     if (err) throw err;
-    //   });
+    })
+    .catch((err) => {
+        console.log('An unhandled error occurred while generating the README.md file.');
+        if (err) throw err;
+      });
 }
 
 // function call to initialize program
