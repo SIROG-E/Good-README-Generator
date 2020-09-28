@@ -1,4 +1,4 @@
-// const licenseBadge = require("licenseBadge");
+const licenseBadge = require("./licenseBadge");
 
 //![](https://img.shields.io/static/v1?label=${data.license}&message=${data.username}&color=ab8c9b)
 // function to generate markdown for README
@@ -6,9 +6,10 @@ function generateMarkdown(data) {
   return `
   
   ## **${data.title}**
-  
-  [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
+  ${licenseBadge(data)}
+  [![GitHub license](https://img.shields.io/badge/Made%20by-SIROG--E-ab8c9b?style=flat&logo=github)](http://https://github.com/SIROG-E)  
+  
   ## Description
   ${data.description}
 
@@ -28,13 +29,13 @@ function generateMarkdown(data) {
   ${data.usage}
 
   ## License
-  This project is license by: ${data.license} 
+  This project is licensed by: ${licenseBadge(data)} 
 
   ## Contributing
   ${data.contributing}
 
   ## Test
-  ${data.tests}
+  ${data.tests} 
 
   ## Questions
   If you have any questions, contact ${data.username} at ${data.questions}

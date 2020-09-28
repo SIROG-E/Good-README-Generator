@@ -11,14 +11,5 @@
   "dependencies": {
     "axios": "^0.20.0",
     "inquirer": "^6.5.2"
-  },
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SIROG-E/Good-README-Generator.git"
-  },
-  "bugs": {
-    "url": "https://github.com/SIROG-E/Good-README-Generator/issues"
-  },
-  "homepage": "https://github.com/SIROG-E/Good-README-Generator#readme"
+  }
 }

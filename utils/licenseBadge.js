@@ -11,12 +11,12 @@ function licenseBadge(data) {
         return `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`;
     } else if (data.license == "Mozilla") {
         return `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`;
-    } else if (data.license == "Pearl aka Artistic") {
+    } else if (data.license == "Perl aka Artistic") {
         return `[![License: Artistic-2.0](https://img.shields.io/badge/License-Perl-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)`;
     } else if (data.license == "Unlicense") {
         return `[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)`;
     } else if (data.license == "SIROG-E") {
-        return `[![GitHub license](https://img.shields.io/badge/Made%20by-SIROG--E-ab8c9b?style=flat&logo=github)]`;
+        return `[![GitHub license](https://img.shields.io/badge/Made%20by-SIROG--E-ab8c9b?style=flat&logo=github)](http://https://github.com/SIROG-E)`;
     } else {
         console.log("License Unavailable");
     }

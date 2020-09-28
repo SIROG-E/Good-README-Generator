@@ -44,7 +44,7 @@ const questions = [
     {
         type: "input",
         name: "contributing",
-        message: "Please provide your Github username (if more than one contributor, separate names with a comma and no space!): "
+        message: "Please provide your Github username  (if more than one contributor, separate names with a comma and no space!): "
     },
     {
         type: "input",
@@ -84,13 +84,13 @@ function init() {
             
             const gitInfo = {
                 githubImage: res.data.avatar_url,
-                email: res.data.email,
+                name: res.data.name,
                 profile: res.data.html_url,
-                name: res.data.name
+                email: res.data.email
             };
 
             data.githubInfo = gitInfo;
-            
+          // function to write README file  
           fs.writeFile("README.md", generateMarkdown(data), function(err) {
             if (err) {
               throw err;
