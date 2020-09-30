@@ -44,7 +44,7 @@ const questions = [
     {
         type: "input",
         name: "contributing",
-        message: "Please provide your Github username  (if more than one contributor, separated by comma!): "
+        message: "Please provide your Github username  (if more than one contributor, separate them with commas!): "
     },
     {
         type: "input",
