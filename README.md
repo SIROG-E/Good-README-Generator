@@ -1,3 +1,5 @@
+
+  
   ## **GOOD-README-GENERATOR**
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -19,7 +21,7 @@
   Run: ```npm install```
 
   ## Usage
-  This command-line application dynamically generates a README.md from a user's input. The application will be invoked with the following command: ```node index.js``` The user will be prompted for their GitHub username and other information pertaining to the project the README is for.
+  This command-line application dynamically generates a README.md from a user's input. The application will be invoked with the following command: ```node index.js```
 
   ## License
   This project is licensed by: [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
